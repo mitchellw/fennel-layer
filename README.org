@@ -1,0 +1,37 @@
+#+TITLE: Fennel layer
+
+#+TAGS: general|layer|fennel|lua|programming
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+  - [[#features][Features:]]
+- [[#install][Install]]
+- [[#key-bindings][Key bindings]]
+
+* Description
+Adds support for the [[https://fennel-lang.org/][Fennel]] programming language.
+
+** Features:
+  - Syntax highlighting with =racket-mode=
+  - Test runner
+  - Interactive REPL
+  - More to come...
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =fennel= to the existing =dotspacemacs-configuration-layers= list in this
+file. You will also need fennel installed in your path
+([[https://fennel-lang.org/][see Fennel site]]).
+
+This layer is currently set up to enable fennel-mode for any .fnl files.
+
+* Key bindings
+
+| Key Binding | Description                                       |
+|-------------+---------------------------------------------------|
+| ~SPC m r~   | Runs Fennel REPL                                  |
+| ~SPC m c r~ | Reloads the module in REPL                        |
+| ~SPC m c l~ | Shows compiled Lua                                |
+| ~SPC m g g~ | Find definition of symbol                         |
+| ~SPC m g G~ | Pops back from finding the definition of symbol   |
