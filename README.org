@@ -12,6 +12,9 @@
 * Description
 Adds support for the [[https://fennel-lang.org/][Fennel]] programming language.
 
+Disclaimer: Still in progress. I am having mixed results with certain features
+using the REPL such as the "Find definition of symbol" functionality.
+
 ** Features:
   - Syntax highlighting with =fennel-mode=
   - Interactive REPL
