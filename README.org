@@ -14,7 +14,6 @@ Adds support for the [[https://fennel-lang.org/][Fennel]] programming language.
 
 ** Features:
   - Syntax highlighting with =fennel-mode=
-  - Test runner
   - Interactive REPL
   - More to come...
 
