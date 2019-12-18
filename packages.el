@@ -30,17 +30,29 @@
     :config
     (progn
       ;; key bindings
-      (dolist (prefix '(("mc" . "compile")
-                        ("mg" . "goto")))
+      (dolist (prefix '(("me" . "eval")
+                        ("mg" . "goto")
+                        ("mh" . "help")))
         (spacemacs/declare-prefix-for-mode
           'fennel-mode (car prefix) (cdr prefix)))
       (spacemacs/set-leader-keys-for-major-mode 'fennel-mode
-        "r" 'fennel-repl
+        "'" 'fennel-repl
+        "r" 'fennel-reload
 
-        ;; compile
-        "cr" 'fennel-reload
-        "cl" 'fennel-view-compilation
+        ;; eval
+        ;"ea" 'lisp-show-arglist
+        ;"eb" 'eval-buffer
+        "ee" 'lisp-eval-defun
+        "eL" 'fennel-view-compilation
+        "en" 'lisp-eval-form-and-next
+        "ep" 'lisp-eval-paragraph
+        "er" 'lisp-eval-region
 
         ;; goto
         "gg" 'fennel-find-definition
-        "gG" 'fennel-find-definition-pop))))
+        "gG" 'fennel-find-definition-pop
+
+        ;; help
+        ;"hf" 'lisp-show-function-documentation
+        ;"hv" 'lisp-show-variable-documentation
+        "hd" 'lisp-describe-sym))))

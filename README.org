@@ -30,10 +30,16 @@ This layer is currently set up to enable fennel-mode for any .fnl files.
 
 * Key bindings
 
-| Key Binding | Description                                       |
-|-------------+---------------------------------------------------|
-| ~SPC m r~   | Runs Fennel REPL                                  |
-| ~SPC m c r~ | Reloads the module in REPL                        |
-| ~SPC m c l~ | Shows compiled Lua                                |
-| ~SPC m g g~ | Find definition of symbol                         |
-| ~SPC m g G~ | Pops back from finding the definition of symbol   |
+
+| Key Binding | Description                                     |
+|-------------+-------------------------------------------------|
+| ~SPC m '~   | Runs Fennel REPL                                |
+| ~SPC m r~   | Reloads the module in REPL                      |
+| ~SPC m e e~ | Evaluate the current form                       |
+| ~SPC m e L~ | Shows compiled Lua                              |
+| ~SPC m e n~ | Evaluate the current form and go to the next    |
+| ~SPC m e p~ | Evaluate the current paragraph                  |
+| ~SPC m e r~ | Evaluate the currently selected region          |
+| ~SPC m g g~ | Find definition of symbol                       |
+| ~SPC m g G~ | Pops back from finding the definition of symbol |
+| ~SPC h d~   | Describe a symbol known by the Fennel process   |
