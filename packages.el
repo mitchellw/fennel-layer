@@ -15,13 +15,17 @@
   '(fennel-mode)
   "The list of Lisp packages required by the fennel layer.")
 
+;; work around slime bug: https://gitlab.com/technomancy/fennel-mode/issues/3
+(defun fennel-mode-disable-slime ()
+  (slime-mode -1))
 
-;;; packages.el ends here
 (defun fennel/init-fennel-mode ()
   (use-package fennel-mode
     :defer t
     :init
     (progn
+      (when (configuration-layer/package-usedp 'slime)
+        (add-hook 'fennel-mode-hook 'fennel-mode-disable-slime))
       (spacemacs/register-repl 'fennel-mode 'fennel-repl "fennel"))
     :config
     (progn
