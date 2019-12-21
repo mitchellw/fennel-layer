@@ -51,9 +51,7 @@
         "ep" 'lisp-eval-paragraph
         "er" 'lisp-eval-region
 
-        ;; goto
-        "gg" 'fennel-find-definition
-        "gG" 'fennel-find-definition-pop
+        ;; goto - gg and gG are taken care of by spacemacs
 
         ;; help
         ;"hf" 'lisp-show-function-documentation
